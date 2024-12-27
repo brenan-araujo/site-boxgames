@@ -11,16 +11,14 @@ header {
 }
 
 header,
-section h2{
+section h2,
+section h3,
+form button{
     font-family: 'Bungee', cursive;
-}
-
-header h1,
-section h2{
     font-weight: normal;
 }
 
-body{
+body, input, textarea{
     font-family: 'roboto', sans-serif;
 }
 
@@ -82,6 +80,11 @@ section .store-front{
     border-radius: 10px;
 }
 
+
+.social-links li a{
+    text-decoration: none;
+}
+
 .social-links img{
     height: 25px;
 }
@@ -92,6 +95,7 @@ section .store-front{
 
 .contact-methods {
     display: flex;
+    justify-content: space-between;
 }
 
 form input,
@@ -101,4 +105,45 @@ form button{
     width: 320px;
     margin-bottom: 8px;
     padding: 8px;
+}
+
+form textarea{
+    resize: none;
+    height: 180px;
+}
+
+form button{
+    background-color: #182c61;
+    color:#ecf0f1;
+    border: none;
+    cursor: pointer;
+}
+
+form button:hover{
+    background-color: #39508f;
+}
+
+input:focus, textarea:focus{
+    outline-color: #182c61;
+}
+
+footer{
+    background-color: #182c61;
+    color: #ecf0f1;
+    padding: 16px 0;
+}
+
+.social-links {
+    display: flex; /* Ativa o flexbox */
+    flex-direction: row; /* Garante que os itens fiquem lado a lado */
+    align-items: center; /* Centraliza os itens verticalmente */
+    justify-content: center; /* Centraliza os itens horizontalmente dentro do contêiner */
+    gap: 16px; /* Define o espaçamento entre os ícones */
+    margin: 0; /* Remove margens extras */
+    padding: 0; /* Remove padding extra */
+    list-style: none; /* Remove os marcadores de lista */
+}
+
+.social-links li {
+    display: inline-block; /* Garante que os itens se comportem adequadamente */
 }
